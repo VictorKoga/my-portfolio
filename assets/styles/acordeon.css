@@ -1,0 +1,67 @@
+/* Estilos do Acordeão */
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 1.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo normal */
+}
+
+.acordeon.open,
+.acordeon:hover {
+    background-color: rgba(85, 86, 158, 0.8); /* Cor de fundo ao abrir ou em hover */
+    border-color: #55569E;
+    border-radius: 1.5rem;
+}
+
+.acordeon .trigger {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+}
+
+.acordeon .trigger:hover {
+    cursor: pointer;
+}
+
+.acordeon .trigger::after {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/assets/images/icons/arrow.svg);
+    transition: .3s;
+}
+
+.acordeon.open .trigger::after {
+    transform: rotate(180deg);
+}
+
+.acordeon .content {
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    flex-direction: column; /* Alinha os itens em uma coluna */
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0; /* Começa transparente */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+
+.acordeon.open .content {
+    max-height: 1000px; 
+    opacity: 1; /* Torna-se visível ao abrir */
+}

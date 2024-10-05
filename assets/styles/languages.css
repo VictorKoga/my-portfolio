@@ -1,0 +1,39 @@
+/* Estilos da Lista de Idiomas */
+.languages {
+  display: flex;
+  flex-direction: row; /* Alinha a lista horizontalmente */
+  justify-content: center; /* Centraliza os itens no contêiner */
+  align-items: center; /* Alinha os itens verticalmente */
+  margin: 0; /* Remove margem */
+  padding: 0; /* Remove padding */
+  list-style: none; /* Remove marcadores da lista */
+  flex-wrap: wrap; /* Permite que os itens "quebrem" para a linha seguinte, se necessário */
+}
+
+.languages li {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex; /* Usar flexbox para alinhar ícone e texto */
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
+  padding: 1rem;  
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.5s ease-in-out; /* Transição suave para a opacidade */
+  margin: 0 1rem; /* Espaçamento lateral entre os itens */
+  flex: 1 1 120px; /* Permite que os itens cresçam e encolham, com largura mínima de 120px */
+  max-width: 200px; /* Limita a largura máxima de cada item */
+}
+
+.languages li::before {
+  content: '';
+  display: inline-block;
+  width: 1rem; /* Ajuste conforme necessário */
+  height: 1rem;  
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/assets/images/icons/smallarrow.svg);
+  margin-right: 0.5rem; /* Espaço entre o ícone e o texto */
+}
+
+.acordeon.open .languages li {
+  opacity: 1; /* Torna os itens visíveis quando o acordeão está aberto */
+}

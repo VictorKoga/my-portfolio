@@ -1,0 +1,96 @@
+/* skills.css */
+
+/* Estiliza a lista de habilidades profissionais */
+.skills {
+  display: flex; /* Alinha os itens em uma linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o preenchimento da lista */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Centraliza o título de habilidades profissionais */
+.skills h2 {
+  width: 100%; /* Faz o título ocupar toda a largura */
+  text-align: center; /* Centraliza o título */
+  margin: 1rem 0; /* Espaçamento acima e abaixo do título */
+}
+
+/* Estiliza os ícones de habilidades profissionais */
+.skill-icon {
+  width: 40px; /* Define a largura dos ícones */
+  height: 40px; /* Define a altura dos ícones */
+  margin: 0.5rem; /* Espaçamento entre os ícones */
+}
+
+/* Estiliza a lista de habilidades pessoais */
+.habilidades {
+  display: flex; /* Alinha os itens em uma linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o preenchimento da lista */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 2rem; /* Espaço entre as habilidades profissionais e pessoais */
+}
+
+/* Centraliza o título de habilidades pessoais */
+.habilidades h3 {
+  
+  width: 100%; /* Faz o título ocupar toda a largura */
+  text-align: center; /* Centraliza o título */
+  margin: 1rem 0; /* Espaçamento acima e abaixo do título */
+}
+
+/* Estiliza os itens das habilidades pessoais */
+.habilidades li {
+  margin: 1rem; /* Espaçamento entre as habilidades */
+  display: flex; /* Alinha os itens horizontalmente */
+  align-items: center; /* Alinha verticalmente ao centro */
+}
+
+.skills {
+  list-style: none; /* Remove o estilo da lista */
+  display: flex; /* Coloca as imagens lado a lado */
+  justify-content: center; /* Centraliza as imagens */
+  margin-bottom: 0; /* Remove a margem inferior */
+}
+
+.habilidades {
+  list-style: none; /* Remove o estilo da lista */
+  display: flex; /* Alinha os itens lado a lado */
+  justify-content: center; /* Centraliza os itens */
+  margin-top: 10px; /* Espaçamento acima da lista */
+}
+
+.skill-icon {
+  width: 40px; /* Define o tamanho da imagem */
+  height: 40px; /* Define o tamanho da imagem */
+  margin: 0 5px; /* Espaçamento entre as imagens */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.skill-icon:hover {
+  transform: scale(1.2); /* Aumenta a imagem em 20% ao passar o mouse */
+}
+
+.personal-skills-title {
+  text-align: center; /* Centraliza o título */
+  margin-top: 10px; /* Espaçamento acima do título */
+  font-size: 20px; /* Aumenta o tamanho da fonte, se necessário */
+}
+
+.habilidades li {
+  display: inline-block; /* Alinha os itens na horizontal */
+  margin: 0 10px; /* Espaçamento entre os itens */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+.habilidades li:hover {
+  transform: scale(1.1); /* Aumenta a lista em 10% ao passar o mouse */
+}
+
+
+
+

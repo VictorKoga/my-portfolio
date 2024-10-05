@@ -1,0 +1,40 @@
+/* about.css */
+.acordeon .trigger:hover {
+  background-color: #383838;
+}
+
+.acordeon .content {
+  display: none;
+  padding: 20px 0;
+  color: white;
+  line-height: 1.8;
+}
+
+.acordeon.active .content {
+  display: block;
+}
+
+.about-me-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.about-me-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  font-size: 18px;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.about-me-list li::before {
+  content: "• ";
+  color: #ffcc00;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.about-me-list li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,81 @@
+/* Estilos do Acordeão */
+.acordeon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #FFF;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo normal */
+}
+
+.acordeon.open,
+.acordeon:hover {
+  background-color: rgba(85, 86, 158, 0.8); /* Cor de fundo ao abrir ou em hover */
+  border-color: #55569E;
+}
+
+/* Conteúdo do Acordeão */
+.acordeon .content {
+  display: none; /* Esconde o conteúdo inicialmente */
+  overflow: hidden; /* Evita que o conteúdo transborde */
+  transition: max-height 0.3s ease; /* Suaviza a transição de abertura e fechamento */
+}
+
+.acordeon.open .content {
+  display: block; /* Mostra o conteúdo quando aberto */
+}
+
+/* Para o botão do acordeão */
+.trigger {
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  padding: 1rem; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor para mãozinha */
+  text-align: left; /* Alinha o texto à esquerda */
+  width: 100%; /* O botão ocupa toda a largura */
+  font-size: 1rem; /* Tamanho da fonte */
+  border-radius: 1.5rem; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição para a cor do botão */
+}
+
+.trigger:hover {
+  background: linear-gradient(45deg, #9013fe, #4a90e2); /* Gradiente no hover */
+  border-radius: 1.5rem;
+}
+
+/* Estilos da Portfolio */
+.portfolio {
+  display: flex; /* Usar Flexbox para o layout */
+  flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas, se necessário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  padding: 0; /* Remove o padding padrão da lista */
+  list-style: none; /* Remove as marcas de lista */
+}
+
+.portfolio li {
+  margin: 1rem; /* Adiciona espaço entre os itens */
+  text-align: center; /* Centraliza o texto abaixo da imagem */
+}
+
+.portfolio a {
+  display: inline-block; /* Permite estilizar como um bloco */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Mantém a cor do texto */
+}
+
+.project-cover {
+  width: 100px; /* Define uma largura menor para as imagens */
+  height: auto; /* Mantém a proporção das imagens */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para o hover */
+}
+
+.project-cover:hover {
+  transform: scale(1.1); /* Aumenta um pouco a imagem no hover */
+}
+
+.portfolio a:hover .project-cover {
+  transform: scale(1.2); /* Aumenta ainda mais a imagem no hover do link */
+}
